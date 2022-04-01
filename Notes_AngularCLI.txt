@@ -1,0 +1,40 @@
+Angular
+
+Installing Angular cli
+--> Install ndejs
+--> Install Angular cli 
+        npm install -g @angular/cli@12
+
+Create Angular project
+    ng new client --strict false
+        routing - Yes
+        stylesheet -CSS
+
+Starting Angular 
+    ng serve
+
+--------------------------------
+Tutorial
+
+@Component
+@NgModule
+    All these are DECORATORS which inddicates what it install
+
+Angular Module declares the componets available in angular apps inside declarations array
+    it can also import other modules to other modules using imports:
+
+NG Module has bootstrap which bootstraps
+
+
+Important Files:
+    index.html  -> the one page file which is like a starting point
+    main.ts    -> Bootstraps the appmodule which inturns bootstraps app Component
+    tsconfig.json ->
+    angular.json -> provides configuration for angular cli, Adding scripts and styles will be done here
+
+Observarble: 
+    The way to handle async calls.
+
+Structural directives : Modifies the domain object model in HTML in some way
+    Eg:  *ngFor
+

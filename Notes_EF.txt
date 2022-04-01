@@ -1,0 +1,27 @@
+Working with EF core (Code first)
+
+Create entity class (Say AppUser) 
+
+Add Nuget for Microsoft.EntityFrameWorkCore.SqlLite* to the project
+
+Create DBContext Class
+
+Add DbContect to the API services in startup file
+	services.AddDbContext<DataContext>(options => {
+                options.UseSqlite("Connection String");
+            });
+			
+Install the dotnet-ef tool 
+	dotnet tool install --global dotnet-ef --version 6.0.3
+	
+Creating the migrations:
+	[creating migration]
+	dotnet ef migrations add InitialCreate -o Data/Migrationsb
+	(if error install the Microsoft.EntityFrameworkCore.Design. from Nuget)
+	
+	[Creating Database using migrations]
+	dotnet ef database update
+		Creates the table(for keeping track for migrations that are applied)
+		Creates the actual table
+		Inserts the data into DB
+		
